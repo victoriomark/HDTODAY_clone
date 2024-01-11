@@ -125,15 +125,11 @@ function Movie_Details() {
                   <ul className='list-group'>
                      <li className='list-group'>
                         Production:
-                        {production_companies !== undefined
-                           ? production_companies[0].name
-                           : null}
+                        {production_companies ? production_companies.name : null}
                      </li>
                      <li className='list-group'>
                         Country:
-                        {production_countries !== undefined
-                           ? production_countries[0].name
-                           : "Not available"}
+                        {production_countries ?[0].name : production_companies[0].name}
                      </li>
                      <li className='list-group'>Duration: {runtime} min</li>
                   </ul>
