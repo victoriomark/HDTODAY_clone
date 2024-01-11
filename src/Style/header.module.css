@@ -1,0 +1,82 @@
+a{
+    text-decoration: none;
+}
+
+.Header_Section{
+    background-image: url(../assets/CoverHdToday.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+ 
+}
+.card{
+    transition: 0.5s;
+    overflow: hidden;
+    cursor: pointer;
+
+   /* From https://css.glass */
+/* From https://css.glass */
+}
+.card:hover{
+    transform: translateY(-7px);
+}
+img{
+    transition: 0.2s;
+}
+.LikeButton{
+    transition: 0.5s;
+    
+}
+.LikeButton:hover{
+    transform: scale(-5px);
+    cursor: pointer;
+}
+.playEffect{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+   
+}
+.playEffect i{
+    display: none;
+    
+}
+
+.playEffect:hover i {
+    display: block;
+}
+
+
+  
+.play{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.play i{
+    color: rgb(82, 82, 241);
+    font-size: 9rem;
+    cursor: pointer;
+    opacity: 80%;
+    transition: 0.5s;
+}
+.play i:hover{
+    transform: translateY(-5px);
+}
+.HoverEffect{
+    transition: 0.5s;
+    cursor: pointer;
+}
+.HoverEffect:hover{
+    transform: translateY(-5px);
+}
