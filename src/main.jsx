@@ -6,7 +6,8 @@ import Layout from "./Layout";
 import MovieList from "./Components/MovieList";
 import Movie_Details from "./Components/Movie_Details";
 import MovieContextProvider from "./Context/MovieContextProvider";
-import MovieContext from "./Context/Contex";
+import Faforite from "./Components/Faforite";
+import Tv_show from "./Components/Tv_show";
 import {
    Route,
    RouterProvider,
@@ -22,6 +23,8 @@ const router = createBrowserRouter(
          <Route path='/' element={<MovieList />} />
          <Route path="/Movie" element={<Movie_Details/>} />
          <Route path='/Home' element={<MovieList />} />
+         <Route path='/Fovorite' element={<Faforite/>} />
+         <Route path="/Tv_shows" element={<Tv_show/> } />
       </Route>
    )
 );

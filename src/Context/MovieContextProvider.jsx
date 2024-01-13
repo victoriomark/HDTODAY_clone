@@ -15,9 +15,11 @@ function MovieContextProvider({ children }) {
               .get(
                  `https://api.themoviedb.org/3/movie/${Movieid}?api_key=${API_Key}`
               )
+               
               .then((Detais) => {
                  SetInfo(Detais.data);
               })
+            
          : null;
    }, [Movieid]);
  

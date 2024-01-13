@@ -40,7 +40,7 @@ function Header() {
                      <li className='nav-item'>
                         <NavLink
                            className='nav-link fw-bold text-light'
-                           to='/Movies'
+                           to='/Fovorite'
                         >
                            Favorite
                         </NavLink>
@@ -48,7 +48,7 @@ function Header() {
                      <li className='nav-item'>
                         <NavLink
                            className='nav-link fw-bold text-light'
-                           to='/Tv-shows'
+                           to='/Tv_shows'
                         >
                            Tv-shows
                         </NavLink>
