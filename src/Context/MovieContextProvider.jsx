@@ -8,7 +8,6 @@ function MovieContextProvider({ children }) {
    const [SearchText, SetSearch] = useState("Re");
    const [Movieid, SetMovieId] = useState(null);
    const [MovieInfo, SetInfo] = useState([]);
-
    // Api Call for Movie Details
    useEffect(() => {
       Movieid // cchick if may id or wala pag wala null sya if meron call nya yong details
@@ -21,10 +20,7 @@ function MovieContextProvider({ children }) {
               })
          : null;
    }, [Movieid]);
-
-
-   // Function for Movie Details
-
+ 
    return (
       <MovieContext.Provider
          value={{
@@ -35,7 +31,8 @@ function MovieContextProvider({ children }) {
             SearchText,
             MovieInfo,
             SetMovieId,
-            Movieid
+            Movieid,
+          
          }}
       >
          {children}

@@ -42,7 +42,7 @@ function Header() {
                            className='nav-link fw-bold text-light'
                            to='/Movies'
                         >
-                           Favorate
+                           Favorite
                         </NavLink>
                      </li>
                      <li className='nav-item'>

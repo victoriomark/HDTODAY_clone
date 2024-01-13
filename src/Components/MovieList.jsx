@@ -1,13 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import MovieContext from "../Context/Contex";
-import  playEffect from '../Style/header.module.css'
-import { useNavigate,  } from "react-router-dom";
+import playEffect from "../Style/header.module.css";
+import { useNavigate } from "react-router-dom";
 function MovieList() {
    //using UseContext accesing the MovieContext
    const { SetMovie, DataMovie, SearchText, SetMovieId } =
       useContext(MovieContext);
-
 
    const Nav = useNavigate();
    const API_Key = "9ad1808d754c7eef7a94beac49088c9d";
@@ -29,14 +28,8 @@ function MovieList() {
    };
 
    const HandleDetalis = (id) => {
-     SetMovieId(id) || Nav("/Movie") 
+      SetMovieId(id) || Nav("/Movie");
    };
-
-
-
-
-
-console.log(DataMovie)
    return (
       <>
          <main className='container-fluid p-4 '>
@@ -53,8 +46,6 @@ console.log(DataMovie)
                              release_date,
                              title,
                              vote_average,
-                             backdrop_path
-                            
                           },
                           idex
                        ) => {
@@ -67,22 +58,22 @@ console.log(DataMovie)
                                 className='card col-10 col-lg-2 p-2 border-0  '
                              >
                                 {poster_path && (
-                                   <div className="position-relative p-1">
+                                   <div className='position-relative p-1'>
                                       <img
                                          className='card-img'
                                          src={`https://image.tmdb.org/t/p/w500${poster_path}`}
                                          alt=''
                                       />
-                                      <div  onClick={() => HandleDetalis(id)} className={playEffect.playEffect}>
-                                        <i className="fa-solid fa-circle-play fs-1 text-primary"></i>
+                                      <div
+                                         onClick={() => HandleDetalis(id)}
+                                         className={playEffect.playEffect}
+                                      >
+                                         <i className='fa-solid fa-circle-play fs-1 text-primary'></i>
                                       </div>
                                    </div>
                                 )}
 
-                                <div
-                               
-                                   className='card-body'
-                                >
+                                <div className='card-body'>
                                    <h5 className='card-title'>{title}</h5>
                                    <div className='.container-fluid d-flex p-2 justify-content-between '>
                                       <p className='text-muted'>

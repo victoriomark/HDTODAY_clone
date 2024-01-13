@@ -4,9 +4,10 @@ import MovieContext from "../Context/Contex";
 import { useContext } from "react";
 import Plays from '../Style/header.module.css'
 import HoverEffect from '../Style/header.module.css'
+
+
 function Movie_Details() {
-   const bunner =
-      "https://img.hdtoday.tv/xxrz/1300x700/100/87/db/87db01c609dc3a0e1c1349d50d9efc6d/87db01c609dc3a0e1c1349d50d9efc6d.png";
+   
    const { MovieInfo, Movieid } = useContext(MovieContext);
    const {
       id,
@@ -25,7 +26,7 @@ function Movie_Details() {
       popularity,
       production_companies,
    } = MovieInfo;
-   console.log(MovieInfo);
+
 
    // formating the Revinue Monny
 
@@ -37,7 +38,10 @@ function Movie_Details() {
       minHeight: "80vh", // Adjust this as needed
       
    };
-   console.log(backdrop_path);
+     const HanldeFavorite = (id) =>{
+          console.log(id)
+     }
+
    return (
       <>
          <div style={backgroundStyle} className='container-fluid position-relative '>
@@ -90,7 +94,9 @@ function Movie_Details() {
                     <button className={`${HoverEffect.HoverEffect} btn btn-primary  p-2 mt-3`}>
                         <i className='fa-solid fa-circle-play d-flex gap-1 '>play</i>
                     </button>
-                    <button className={`${HoverEffect.HoverEffect} btn btn-warning  p-2 mt-3`}>
+                    <button
+                     onClick={() => HanldeFavorite(id)}
+                     className={`${HoverEffect.HoverEffect} btn btn-warning  p-2 mt-3`}>
                     <i className="fa-regular fw-bold  fa-heart d-flex  gap-1 text-secondary ">Favorate</i>  
                     </button>
                  </div>
@@ -127,10 +133,10 @@ function Movie_Details() {
                         Production:
                         {production_companies ? production_companies.name : null}
                      </li>
-                     <li className='list-group'>
+                     {/* <li className='list-group'>
                         Country:
                         {production_countries ?[0].name : production_companies[0].name}
-                     </li>
+                     </li> */}
                      <li className='list-group'>Duration: {runtime} min</li>
                   </ul>
                </div>
